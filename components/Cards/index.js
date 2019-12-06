@@ -38,9 +38,17 @@ function createCard(object) {
     imgContainer.classList.add('img-container');
 
     // text content
-    // headline.textContent = object.
+    headline.textContent = object.headline;
+    author.textContent = object.authorName;
+    image.src = object.authorPhoto;
+    bySpan.textContent = `By ${author}`;
 
     // append
+    card.appendChild(headline);
+    card.appendChild(author);
+    author.appendChild(imgContainer);
+    imgContainer.appendChild(image);
+    author.appendChild(bySpan)
 
     return card;
 }

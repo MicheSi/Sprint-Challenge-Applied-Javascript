@@ -18,6 +18,9 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics').then(response => 
         addTab.appendChild(topicTab);
     })
 })
+.catch(err => {
+    console.log('error', err)
+})
 
 function Tab(index) {
     const topics = document.createElement('div');
