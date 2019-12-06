@@ -36,7 +36,7 @@ function createCarousel() {
 
 // text content & img sources
   leftBtn.textContent = '\u00AB';
-  rightBtn.textContent = '	\u00BB';
+  rightBtn.textContent = '\u00BB';
   image1.src = './assets/carousel/mountains.jpeg';
   image2.src = './assets/carousel/computer.jpeg';
   image3.src = './assets/carousel/trees.jpeg';
@@ -61,5 +61,5 @@ function createCarousel() {
 return carousel;
 }
 
-const addCarousel = document.querySelector('.carousel-container')
-addCarousel.appendChild(createCarousel())
+const addCarousel = document.querySelector('.carousel-container');
+addCarousel.appendChild(createCarousel());

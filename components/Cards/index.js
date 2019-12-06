@@ -19,12 +19,8 @@
 // Create a card for each of the articles and add the card to the DOM.
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
-    console.log(response.data);
     const articles = Object.values(response.data.articles)
-    console.log(articles)
-
     articles.forEach(card => {
-        console.log(card)
         card.forEach(subject => {
             addArticle.appendChild(createCard(subject))
         })
@@ -52,7 +48,7 @@ function createCard(object) {
     headline.textContent = object.headline;
     author.textContent = object.authorName;
     image.src = object.authorPhoto;
-    bySpan.textContent = `By ${author}`;
+    bySpan.textContent = `By ${object.authorName}`;
 
     // append
     card.appendChild(headline);
