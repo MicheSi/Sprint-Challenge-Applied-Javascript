@@ -20,7 +20,15 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
     console.log(response.data);
+    const articles = Object.values(response.data.articles)
+    console.log(articles)
 
+    articles.forEach(card => {
+        console.log(card)
+        card.forEach(subject => {
+            addArticle.appendChild(createCard(subject))
+        })
+    })
 })
 
 function createCard(object) {
@@ -52,3 +60,5 @@ function createCard(object) {
 
     return card;
 }
+
+const addArticle = document.querySelector('.cards-container')
