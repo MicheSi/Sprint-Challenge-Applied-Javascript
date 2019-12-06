@@ -34,7 +34,9 @@ function createCarousel() {
   leftBtn.classList.add('left-button');
   rightBtn.classList.add('right-button');
 
-// img sources
+// text content & img sources
+  leftBtn.textContent = '\u00AB';
+  rightBtn.textContent = '	\u00BB';
   image1.src = './assets/carousel/mountains.jpeg';
   image2.src = './assets/carousel/computer.jpeg';
   image3.src = './assets/carousel/trees.jpeg';
@@ -47,6 +49,14 @@ function createCarousel() {
   carousel.appendChild(image3);
   carousel.appendChild(image4);
   carousel.appendChild(rightBtn);
+
+  // event listeners
+  leftBtn.addEventListener('click', event => {
+
+  })
+  rightBtn.addEventListener('click', event => {
+
+  })
 
 return carousel;
 }
