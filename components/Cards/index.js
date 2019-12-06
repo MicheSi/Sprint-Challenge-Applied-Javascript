@@ -30,6 +30,9 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response =
         })
     })
 })
+.catch(err => {
+    console.log("Error", err)
+})
 
 function createCard(object) {
     const card = document.createElement('div'),
